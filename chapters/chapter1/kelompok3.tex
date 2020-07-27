@@ -1,0 +1,331 @@
+\section{1174009 - Dwi Yulianingsih}
+\subsection{Parallel Programming Models}
+\hfill\break
+Model pemrograman paralel ada sebagai abstraksi arsitektur perangkat keras dan memori. Faktanya, model ini tidak spesifik dan tidak merujuk pada jenis mesin atau arsitektur memori tertentu. Mereka dapat diimplementasikan (setidaknya secara teoritis) pada semua jenis mesin. Dibandingkan dengan subdivisi sebelumnya, model pemrograman ini dibuat pada tingkat yang lebih tinggi dan mewakili cara di mana perangkat lunak harus diimplementasikan untuk melakukan perhitungan paralel. Setiap model memiliki caranya sendiri untuk berbagi informasi dengan prosesor lain untuk mengakses memori dan membagi pekerjaan. Secara absolut, tidak ada satu model yang lebih baik dari yang lain. Oleh karena itu, solusi terbaik untuk diterapkan akan sangat tergantung pada masalah yang harus ditangani dan diselesaikan oleh seorang programmer. 
+Model yang paling banyak digunakan untuk pemrograman paralel adalah sebagai berikut: 
+\begin{itemize}
+	\item Model memori bersama 
+	\item Model multithread 
+	\item Model distribusi memori / pesan terdistribusi
+	\item Model paralel data 
+\end{itemize}
+Dalam resep ini, kami akan memberi Anda gambaran umum tentang model-model ini.
+ \begin{figure}[H]
+        \includegraphics[width=4cm]{figures/kelompok3/1/dwi1.PNG}
+        \centering
+        \caption{PPM}
+\end{figure}
+\hfill\break
+\subsection{Shared Memory Models}
+\hfill\break
+Dalam model ini, tugas berbagi area memori tunggal di mana kita dapat membaca dan menulis secara tidak sinkron. Ada mekanisme yang memungkinkan pembuat kode untuk mengontrol akses ke memori bersama; misalnya, mengunci atau semafor. Model ini menawarkan keuntungan bahwa pembuat kode tidak perlu mengklarifikasi komunikasi antar tugas. Kerugian penting, dalam hal kinerja, adalah menjadi lebih sulit untuk memahami dan mengelola lokalitas data. Ini mengacu pada menjaga data tetap lokal untuk prosesor yang bekerja pada menghemat akses memori, penyegaran cache, dan lalu lintas bus yang terjadi ketika beberapa prosesor menggunakan data yang sama.
+ \begin{figure}[H]
+        \includegraphics[width=4cm]{figures/kelompok3/1/dwi11.PNG}
+        \centering
+        \caption{SMM}
+\end{figure}
+\hfill\break
+\subsection{Multithread Models}
+\hfill\break
+Dalam model ini, suatu proses dapat memiliki beberapa alur eksekusi. Misalnya, bagian berurutan dibuat dan, kemudian, serangkaian tugas dibuat yang dapat dieksekusi secara paralel. Biasanya, model jenis ini digunakan pada arsitektur memori bersama. Jadi, akan sangat penting bagi kita untuk mengelola sinkronisasi antara utas, karena mereka beroperasi pada memori bersama, dan programmer harus mencegah beberapa utas dari memperbarui lokasi yang sama pada saat yang sama. CPU generasi sekarang multithreaded dalam perangkat lunak dan perangkat keras. Utas POSIX (kependekan dari Portable Operating System Interface) adalah contoh klasik dari implementasi multithreading pada perangkat lunak. Teknologi Hyper-Threading Intel mengimplementasikan multithreading pada perangkat keras dengan beralih di antara dua utas saat seseorang terhenti atau menunggu di I / O. Paralelisme dapat dicapai dari model ini, bahkan jika penyelarasan data nonlinier.
+ \begin{figure}[H]
+        \includegraphics[width=4cm]{figures/kelompok3/1/dwi3.PNG}
+        \centering
+        \caption{MM}
+\end{figure}
+\hfill\break
+\subsection{Message Passing Models}
+\hfill\break
+Model pesan lewat biasanya diterapkan dalam kasus di mana setiap prosesor memiliki memori sendiri (sistem memori terdistribusi). Lebih banyak tugas dapat berada di mesin fisik yang sama atau pada jumlah mesin yang sewenang-wenang. Coder bertanggung jawab untuk menentukan paralelisme dan pertukaran data yang terjadi melalui pesan, dan perlu untuk meminta dan memanggil pustaka fungsi dalam kode. Beberapa contoh sudah ada sejak tahun 1980-an, tetapi hanya pada pertengahan 1990-an adalah model standar yang dibuat, mengarah ke standar de facto yang disebut Message Passing Interface (MPI).
+ \begin{figure}[H]
+        \includegraphics[width=4cm]{figures/kelompok3/1/dwi4.PNG}
+        \centering
+        \caption{MPM}
+\end{figure}
+
+\section{1174003 - Dwi Septiani Tsaniyah}
+\subsection{Data Parallel Model}
+\hfill\break
+Didalam model ini lebih banyak tugas yang beroperasi pada structure data yang sama , tetapi masuk ke dalam masing-masing tugasnya. Model ini beroperasi pada bagian data yang berbeda , tetapi dalam arsitektur memori bersama , semua tugas memiliki akses data melalui memori , dimana struktur data dibagi dan berada di memori lokal di setiap tugas. Untuk menerapkan model ini, seorang pembuat kode harus mengembangkan program yang menentukan distribusi dan penyelarasan data; misalnya, GPU generasi saat ini sangat operasional 
+Dalam resep ini, kami akan memberi Anda gambaran umum tentang model-model ini.
+ \begin{figure}[H]
+        \includegraphics[width=4cm]{figures/kelompok3/1/septi.jpg}
+        \centering
+        \caption{DPM}
+\end{figure}
+\subsection{Merancang Program Data Parallel}
+\hfill\break
+Desain algoritma yang mengeksploitasi paralelisme didasarkan pada serangkaian operasi, yang harus dilakukan agar program dapat melakukan pekerjaan dengan benar tanpa menghasilkan sebagian atau hasil yang salah. Operasi makro yang harus dilakukan untuk yang benar paralelisasi suatu algoritma adalah sebagai berikut:
+\begin{itemize}
+	\item Dekomposisi 
+	\item Penugasan
+	\item Pengelompokan
+	\item Pemetaan
+\end{itemize}
+
+\section{1174008 - Arjun Yuda Firwanda}
+\subsection{Komputasi Paralel}
+\hfill\break
+Pertumbuhan daya komputasi yang disediakan oleh komputer modern telah mengakibatkan kami menghadapi masalah komputasi yang semakin kompleks dalam jangka waktu yang relatif singkat. Sampai awal 2000-an, kompleksitas ditangani dengan meningkatkan jumlah transistor serta frekuensi clock dari sistem prosesor tunggal, yang mencapai puncak 3,5-4 GHz. Namun, peningkatan jumlah transistor menyebabkan peningkatan eksponensial dari daya yang dihabiskan oleh prosesor itu sendiri.
+
+\hfill\break
+\subsection{Taksonomi Flynn }
+\hfill\break
+Taksonomi Flynn adalah sistem untuk mengklasifikasikan arsitektur komputer. Ini didasarkan pada dua konsep utama:
+\begin{itemize}
+	\item Alur instruksi: Suatu sistem dengan n CPU memiliki n penghitung program dan sesuai dengan penghitung program.
+	\item Aliran data: Program yang menghitung fungsi pada daftar data memiliki aliran data.
+\end{itemize}
+\hfill\break
+    \begin{figure}[H]
+        \includegraphics[width=4cm]{figures/kelompok3/1/arjun1.png}
+        \centering
+        \caption{tf}
+    \end{figure}
+Ada empat kategori mesin paralel: Instruksi Tunggal, Data Tunggal (SISD), Data Instruksi Berganda (SIMD), Instruksi Berganda Data Tunggal (MISD), dan Data Instruksi Berganda Banyak (MIMD).
+
+
+\subsection{Single Instruction Single Data}
+\hfill\break
+Single Instruction Single Data (SISD) Sistem komputasi SISD seperti mesin von Neumann, yang merupakan mesin uniprocessor. 
+Dalam siklus clock, CPU menjalankan operasi berikut:
+\begin{itemize}
+	\item Fetch: CPU mengambil data dan instruksi dari area memori, yang disebut register.
+	\item Decode: CPU menerjemahkan instruksi.
+	\item Execute: Instruksi dilakukan pada data. Hasil operasi disimpan dalam register lain.
+\end{itemize}
+\hfill\break
+    \begin{figure}[H]
+        \includegraphics[width=4cm]{figures/kelompok3/1/arjun2.png}
+        \centering
+        \caption{sisd}
+    \end{figure}
+\hfill\break
+Elemen utama dari arsitektur ini (yaitu, arsitektur von Neumann) adalah sebagai berikut:
+\begin{itemize}
+	\item Unit memori pusat: Ini digunakan untuk menyimpan instruksi dan data program.
+	\item CPU: Ini digunakan untuk mendapatkan instruksi dan / atau data dari unit memori, yang menerjemahkan instruksi dan secara berurutan mengimplementasikannya.
+	\item Sistem I atau  O: Ini mengacu pada data input dan output dari program..
+\end{itemize}
+
+\section{1174096 - Nico Ekklesia Sembiring}
+\subsection{Percepatan/speedup}
+Percepatan adalah ukuran yang menampilkan manfaat dari penyelesaian masalah secara paralel. Percepatan didefinisikan sebagai rasio waktu yang dibutuhkan untuk menyelesaikan masalah pada elemen pemrosesan tunggal (Ts) dengan waktu yang dibutuhkan untuk memecahkan masalah yang sama pada p identik elemen pemrosesan (Tp).
+\begin{figure}[H]
+    \includegraphics[width=4cm]{figures/kelompok3/1/speedup.png}
+    \centering
+    \caption{Rumus Percepatan}
+\end{figure}
+jika S = p, maka itu berarti bahwa kecepatan eksekusi meningkat dengan jumlah prosesor. Tentu saja, ini adalah kasus yang ideal. Sementara speedup mutlak ketika Ts adalah waktu eksekusi dari algoritma sekuensial terbaik, speedup relatif ketika Ts adalah waktu eksekusi dari algoritma paralel untuk satu prosesor. 
+\hfill\break
+Mari kita rekap kondisi ini
+\begin{enumerate}
+	\item S = p adalah percepatan linier atau ideal. 
+	\item S <p adalah percepatan nyata. 
+	\item S> p adalah percepatan superlinear.
+\end{enumerate}
+
+\subsection{Efisiensi}
+Sistem parallel dengan elemen pemrosesan p dapat memberi kita kecepatan yang sama dengan p. Namun, ini sangat jarang dicapai. Biasanya, beberapa waktu terbuang baik dalam pemalasan atau berkomunikasi. 
+\hfill\break
+Efisiensi adalah ukuran dari seberapa banyak waktu eksekusi yang dilakukan oleh elemen pemrosesan untuk melakukan pekerjaan yang bermanfaat, diberikan sebagai sebagian kecil dari waktu yang dihabiskan.
+
+\begin{figure}[H]
+    \includegraphics[width=4cm]{figures/kelompok3/1/efisiensi.png}
+    \centering
+    \caption{Rumus Efisiensi}
+\end{figure}
+Algoritma dengan speedup linier memiliki nilai E = 1. Dalam kasus lain, terdapat nilai E kurang dari 1. 
+\hfill\break
+Tiga kasus diidentifikasi sebagai berikut:
+\begin{enumerate}
+	\item Ketika E = 1, itu adalah kasus linier.  
+	\item Ketika E <1, itu adalah kasus nyata.  
+	\item Ketika E << 1, itu adalah masalah yang dapat diparalelkan dengan efisiensi rendah.
+\end{enumerate}
+\subsection{Penskalaan(Scaling)}
+Penskalaan didefinisikan sebagai kemampuan untuk menjadi efisien pada mesin paralel. Ini mengidentifikasi kekuatan komputasi (kecepatan eksekusi) secara proporsional dengan jumlah prosesor. Dengan meningkatkan ukuran masalah dan, pada saat yang sama, jumlah prosesor, tidak akan ada kerugian dalam hal kinerja. Sistem yang dapat diskalakan, tergantung pada peningkatan faktor yang berbeda, dapat mempertahankan efisiensi yang sama atau meningkatkannya.
+
+\subsection{Hukum Amdahl}
+Hukum Amdahl adalah hukum yang banyak digunakan yang digunakan untuk merancang prosesor dan algoritma paralel. Ini menyatakan bahwa speedup maksimum yang dapat dicapai dibatasi oleh komponen serial program:
+\begin{figure}[H]
+    \includegraphics[width=4cm]{figures/kelompok3/1/amdahl.png}
+    \centering
+    \caption{Rumus Hukum Amdahl}
+\end{figure}
+1 - P menunjukkan komponen serial (tidak diparalelkan) dari suatu program.
+\hfill\break
+Ini berarti bahwa, misalnya, jika suatu program di mana 90% dari kode dapat dibuat paralel, tetapi 10% harus tetap serial, maka speedup maksimum yang dapat dicapai adalah 9, bahkan untuk jumlah prosesor yang tak terbatas.
+
+\subsection{Hukum Gustafson}
+Rumus hukum Gustafson adalah sebagai berikut : 
+\begin{figure}[H]
+    \includegraphics[width=4cm]{figures/kelompok3/1/gustafson.png}
+    \centering
+    \caption{Rumus Hukum Gustafson}
+\end{figure}
+Pada persamaan berikut ini berlaku:
+\begin{enumerate}
+	\item P adalah jumlah prosesor.  
+	\item S adalah faktor percepatan.  
+	\item alpha adalah fraksi yang tidak dapat diparalelkan dari setiap proses paralel.
+\end{enumerate}
+Hukum Gustafson berbeda dengan hukum Amdahl, yang mengasumsikan bahwa keseluruhan beban kerja suatu program tidak berubah sehubungan dengan jumlah prosesor.
+\hfill\break
+Faktanya, hukum Gustafson menyatakan bahwa programmer pertama-tama mengatur waktu yang diizinkan untuk menyelesaikan masalah secara paralel dan kemudian berdasarkan pada hal itu (yaitu waktu) untuk mengukur masalah. Oleh karena itu, semakin cepat sistem paralelnya, semakin besar masalah yang dapat diselesaikan selama periode waktu yang sama.
+\hfill\break
+Efek dari hukum Gustafson adalah untuk mengarahkan tujuan penelitian komputer ke arah pemilihan atau perumusan kembali masalah sedemikian rupa sehingga solusi dari masalah yang lebih besar masih mungkin dalam jumlah waktu yang sama. Selanjutnya, undang-undang ini mendefinisikan kembali konsep efisiensi sebagai kebutuhan untuk mengurangi setidaknya bagian berurutan dari suatu program, meskipun ada peningkatan beban kerja.
+
+\subsection{Pengenalan Python}
+Python adalah bahasa pemrograman yang kuat, dinamis, dan ditafsirkan yang digunakan dalam berbagai aplikasi. Beberapa fitur-fiturnya adalah sebagai berikut:
+
+\begin{enumerate}
+	\item Sintaks yang jelas dan mudah dibaca.
+	\item Pustaka standar yang sangat luas, di mana, melalui modul perangkat lunak tambahan, kita dapat menambahkan tipe data, fungsi, dan objek. 
+	\item Pengembangan cepat dan debugging yang mudah dipelajari. Mengembangkan kode Python dalam Python bisa mencapai 10 kali lebih cepat daripada dalam kode C / C ++. Kode juga dapat berfungsi sebagai prototipe dan kemudian diterjemahkan ke dalam C / C ++.
+    \item Penanganan kesalahan berbasis pengecualian.
+    \item Fungsionalitas introspeksi yang kuat.
+    \item Kekayaan dokumentasi dan komunitas perangkat lunak.
+\end{enumerate}
+
+\section{1174027 - Harun Ar - Rasyid}
+\subsection{Introducing Python}
+\hfill\break
+Python adalah bahasa pemrograman yang kuat, dinamis, dan digunakan dalam berbagai macam aplikasi. \\
+Beberapa fitur-fiturnya adalah sebagai berikut:
+\begin{itemize}
+    \item Sintaks yang mudah dibaca dan jelas.
+    \item Perpustakaan standar yang sangat luas.
+    \item Pengembangan Cepat dan debugging yang mudah dipelajari.
+\end{itemize}
+\subsection{Help Function}
+\hfill\break
+Python interpreter sudah menyediakan sistem bantuan yang valid.
+\begin{enumerate}
+    \item Help(object)
+    \lstinputlisting[firstline=7, lastline=8]{src/kelompok3/1/1.py}
+    \begin{figure}[H]
+        \includegraphics[width=4cm]{figures/kelompok3/1/1.png}
+        \centering
+        \caption{Hasil Dari Help bagian 1}
+    \end{figure}
+    \begin{figure}[H]
+        \includegraphics[width=4cm]{figures/kelompok3/1/2.png}
+        \centering
+        \caption{Hasil Dari Help bagian 2}
+    \end{figure}
+    \begin{figure}[H]
+        \includegraphics[width=4cm]{figures/kelompok3/1/3.png}
+        \centering
+        \caption{Hasil Dari Help bagian 3}
+    \end{figure}
+    \begin{figure}[H]
+        \includegraphics[width=4cm]{figures/kelompok3/1/4.png}
+        \centering
+        \caption{Hasil Dari Help bagian 4}
+    \end{figure}
+    \begin{figure}[H]
+        \includegraphics[width=4cm]{figures/kelompok3/1/5.png}
+        \centering
+        \caption{Hasil Dari Help bagian 5}
+    \end{figure}
+    \begin{figure}[H]
+        \includegraphics[width=4cm]{figures/kelompok3/1/6.png}
+        \centering
+        \caption{Hasil Dari Help bagian 6}
+    \end{figure}
+    \begin{figure}[H]
+        \includegraphics[width=4cm]{figures/kelompok3/1/7.png}
+        \centering
+        \caption{Hasil Dari Help bagian 7}
+    \end{figure}
+    \begin{figure}[H]
+        \includegraphics[width=4cm]{figures/kelompok3/1/8.png}
+        \centering
+        \caption{Hasil Dari Help bagian 8}
+    \end{figure}
+    \begin{figure}[H]
+        \includegraphics[width=4cm]{figures/kelompok3/1/9.png}
+        \centering
+        \caption{Hasil Dari Help bagian 9}
+    \end{figure}
+    \begin{figure}[H]
+        \includegraphics[width=4cm]{figures/kelompok3/1/10.png}
+        \centering
+        \caption{Hasil Dari Help bagian 10}
+    \end{figure}
+    \item dir(object)
+    \lstinputlisting[firstline=9, lastline=10]{src/kelompok3/1/1.py}
+    \begin{figure}[H]
+        \includegraphics[width=4cm]{figures/kelompok3/1/11.png}
+        \centering
+        \caption{Hasil Dari Dir Bagian 1}
+    \end{figure}
+    \begin{figure}[H]
+        \includegraphics[width=4cm]{figures/kelompok3/1/12.png}
+        \centering
+        \caption{Hasil Dari Dir Bagian 2}
+    \end{figure}
+    \begin{figure}[H]
+        \includegraphics[width=4cm]{figures/kelompok3/1/13.png}
+        \centering
+        \caption{Hasil Dari Dir Bagian 3}
+    \end{figure}
+    \item abs document
+    \lstinputlisting[firstline=11, lastline=12]{src/kelompok3/1/1.py}
+    \begin{figure}[H]
+        \includegraphics[width=4cm]{figures/kelompok3/1/14.png}
+        \centering
+        \caption{Hasil Dari abs document}
+    \end{figure}
+\end{enumerate}
+\section{1174026 - Felix Lase}
+\subsection{Syntax}
+\hfill\break
+Python tidak mengadopsi terminator pernyataan, dan blok kode ditentukan melalui
+lekukan. Pernyataan yang mengharapkan tingkat indentasi harus diakhiri dengan tanda titik dua (:). Ini mengarah
+sebagai berikut:
+\begin{itemize}
+    \item Kode Python lebih jelas dan lebih mudah dibaca.
+    \item Struktur program selalu bertepatan dengan indentasi.
+    \item Lekukan yang buruk dapat menyebabkan kesalahan.
+\end{itemize}
+\lstinputlisting[firstline=9, lastline=13]{src/kelompok3/1/quick.py}
+
+\subsection{Comments}
+\hfill\break
+Komentar dimulai dengan tanda pagar  dan berada pada satu baris:
+\begin{itemize}
+    \item  komentar satu baris
+\end{itemize}
+String multi-baris digunakan untuk komentar multi-baris:
+\begin{itemize}
+    \item "" "baris pertama dari komentar multi-baris
+baris kedua dari komentar multi-baris. "" "
+\end{itemize}
+
+\subsection{Assignments}
+\hfill\break
+Tugas dibuat dengan simbol sama dengan (=). Untuk tes persamaan, jumlah yang sama (==)
+digunakan. Anda dapat menambah dan mengurangi nilai menggunakan operator + = dan - =, diikuti oleh
+sebuah tambahan. Ini berfungsi dengan banyak jenis data, termasuk string. Anda dapat menetapkan dan
+gunakan beberapa variabel pada baris yang sama.
+\lstinputlisting[firstline=15, lastline=21]{src/kelompok3/1/quick.py}
+
+\subsection{Data types}
+\hfill\break
+Struktur paling signifikan dalam Python adalah daftar, tupel, dan kamus. Set telah
+diintegrasikan ke dalam Python sejak versi 2.5 (versi sebelumnya tersedia di set
+Perpustakaan):
+\begin{itemize}
+    \item List :Ini mirip dengan array satu dimensi, tetapi Anda dapat membuat daftar itu
+mengandung daftar lain.
+    \item Dictionaries : Ini adalah array yang berisi pasangan kunci dan nilai-nilai (tabel hash).
+    \item Tuples : Ini adalah objek mono-dimensi abadi.
+\end{itemize}
+\begin{enumerate}
+\item List
+\lstinputlisting[firstline=24, lastline=30]{src/kelompok3/1/quick.py}
+\item Dictionaries
+\lstinputlisting[firstline=32, lastline=36]{src/kelompok3/1/quick.py}
+\end{enumerate}

@@ -1,0 +1,113 @@
+\contentsline {schapter}{Kata Pengantar}{v}
+\contentsline {schapter}{Daftar Gambar}{ix}
+\contentsline {schapter}{Foreword}{xi}
+\contentsline {schapter}{Acknowledgments}{xiii}
+\contentsline {schapter}{Acronyms}{xv}
+\contentsline {schapter}{Glossary}{xvii}
+\contentsline {schapter}{Introduction}{xix}
+\contentsline {ichapter}{Rolly Maulana Awangga, S.T., M.T.}{xix}
+\contentsline {chapter}{\numberline {1}Chapter 1}{1}
+\contentsline {section}{\numberline {1.1}1174004 - Choirulanam}{1}
+\contentsline {subsection}{\numberline {1.1.1}Data Types}{1}
+\contentsline {subsection}{\numberline {1.1.2}String}{3}
+\contentsline {subsection}{\numberline {1.1.3}Bukti Tidak Plagiat}{3}
+\contentsline {section}{\numberline {1.2}1174012 - Damara Benedikta}{3}
+\contentsline {subsection}{\numberline {1.2.1}Flow control }{3}
+\contentsline {subsection}{\numberline {1.2.2}Functions}{5}
+\contentsline {subsection}{\numberline {1.2.3}Bukti Tidak Plagiat}{6}
+\contentsline {section}{\numberline {1.3}1174095 - Muhammad Dzihan}{6}
+\contentsline {subsection}{\numberline {1.3.1}Class}{6}
+\contentsline {subsection}{\numberline {1.3.2}Exceptions}{9}
+\contentsline {subsection}{\numberline {1.3.3}Bukti Tidak Plagiat}{11}
+\contentsline {section}{\numberline {1.4}1174021 - Muhammad Fahmi}{11}
+\contentsline {subsection}{\numberline {1.4.1}Importing Libraries}{11}
+\contentsline {subsection}{\numberline {1.4.2}Managing Files}{11}
+\contentsline {subsection}{\numberline {1.4.3}List Comprehensions}{12}
+\contentsline {subsection}{\numberline {1.4.4}Running Python Scripts}{12}
+\contentsline {subsection}{\numberline {1.4.5}Installing Python packages using pip}{13}
+\contentsline {subsubsection}{\numberline {1.4.5.1}Installing Pip}{13}
+\contentsline {subsubsection}{\numberline {1.4.5.2}Updating Pip}{14}
+\contentsline {subsubsection}{\numberline {1.4.5.3}Using Pip}{14}
+\contentsline {subsection}{\numberline {1.4.6}Penanganan Error}{14}
+\contentsline {subsection}{\numberline {1.4.7}Bukti Tidak Plagiat}{15}
+\contentsline {section}{\numberline {1.5}1174031 - Muhammad Tomy Nur Maulidy}{15}
+\contentsline {subsection}{\numberline {1.5.1}Memperkenalkan pemrograman paralel Python}{15}
+\contentsline {subsection}{\numberline {1.5.2}Proses dan utas}{15}
+\contentsline {subsection}{\numberline {1.5.3}Praktek}{16}
+\contentsline {subsection}{\numberline {1.5.4}Percobaan}{17}
+\contentsline {subsection}{\numberline {1.5.5}Bukti Tidak Plagiat}{18}
+\contentsline {section}{\numberline {1.6}Kenapa kita membutuhkan komputasi parallel?}{19}
+\contentsline {section}{\numberline {1.7}Taksonomi Flynn}{19}
+\contentsline {subsection}{\numberline {1.7.1}Single Instruction Single Data (SISD)}{20}
+\contentsline {subsection}{\numberline {1.7.2}MISD}{21}
+\contentsline {subsection}{\numberline {1.7.3}SIMD}{21}
+\contentsline {subsection}{\numberline {1.7.4}MIMD}{22}
+\contentsline {section}{\numberline {1.8}Organisasi Memori}{22}
+\contentsline {subsection}{\numberline {1.8.1}Shared Memory}{24}
+\contentsline {subsection}{\numberline {1.8.2}Distributed Memory}{24}
+\contentsline {subsection}{\numberline {1.8.3}MPP}{26}
+\contentsline {subsection}{\numberline {1.8.4}Clusters of Workstations}{26}
+\contentsline {subsection}{\numberline {1.8.5}Heterogeneous Architectures}{27}
+\contentsline {section}{\numberline {1.9}1174009 - Dwi Yulianingsih}{27}
+\contentsline {subsection}{\numberline {1.9.1}Parallel Programming Models}{27}
+\contentsline {subsection}{\numberline {1.9.2}Shared Memory Models}{28}
+\contentsline {subsection}{\numberline {1.9.3}Multithread Models}{29}
+\contentsline {subsection}{\numberline {1.9.4}Message Passing Models}{30}
+\contentsline {section}{\numberline {1.10}1174003 - Dwi Septiani Tsaniyah}{30}
+\contentsline {subsection}{\numberline {1.10.1}Data Parallel Model}{30}
+\contentsline {subsection}{\numberline {1.10.2}Merancang Program Data Parallel}{31}
+\contentsline {section}{\numberline {1.11}1174008 - Arjun Yuda Firwanda}{31}
+\contentsline {subsection}{\numberline {1.11.1}Komputasi Paralel}{31}
+\contentsline {subsection}{\numberline {1.11.2}Taksonomi Flynn }{31}
+\contentsline {subsection}{\numberline {1.11.3}Single Instruction Single Data}{32}
+\contentsline {section}{\numberline {1.12}1174096 - Nico Ekklesia Sembiring}{33}
+\contentsline {subsection}{\numberline {1.12.1}Percepatan/speedup}{33}
+\contentsline {subsection}{\numberline {1.12.2}Efisiensi}{33}
+\contentsline {subsection}{\numberline {1.12.3}Penskalaan(Scaling)}{34}
+\contentsline {subsection}{\numberline {1.12.4}Hukum Amdahl}{34}
+\contentsline {subsection}{\numberline {1.12.5}Hukum Gustafson}{35}
+\contentsline {subsection}{\numberline {1.12.6}Pengenalan Python}{35}
+\contentsline {section}{\numberline {1.13}1174027 - Harun Ar - Rasyid}{36}
+\contentsline {subsection}{\numberline {1.13.1}Introducing Python}{36}
+\contentsline {subsection}{\numberline {1.13.2}Help Function}{36}
+\contentsline {section}{\numberline {1.14}1174026 - Felix Lase}{41}
+\contentsline {subsection}{\numberline {1.14.1}Syntax}{41}
+\contentsline {subsection}{\numberline {1.14.2}Comments}{41}
+\contentsline {subsection}{\numberline {1.14.3}Assignments}{41}
+\contentsline {subsection}{\numberline {1.14.4}Data types}{42}
+\contentsline {chapter}{\numberline {2}Chapter 2}{43}
+\contentsline {section}{\numberline {2.1}1174006 - Kadek Diva Krishna Murti}{43}
+\contentsline {subsection}{\numberline {2.1.1}Teori}{44}
+\contentsline {subsection}{\numberline {2.1.2}Praktek}{44}
+\contentsline {subsection}{\numberline {2.1.3}Penanganan Error}{44}
+\contentsline {subsection}{\numberline {2.1.4}Bukti Tidak Plagiat}{44}
+\contentsline {chapter}{\numberline {3}Chapter 3}{45}
+\contentsline {section}{\numberline {3.1}1174006 - Kadek Diva Krishna Murti}{45}
+\contentsline {subsection}{\numberline {3.1.1}Teori}{46}
+\contentsline {subsection}{\numberline {3.1.2}Praktek}{46}
+\contentsline {subsection}{\numberline {3.1.3}Penanganan Error}{46}
+\contentsline {subsection}{\numberline {3.1.4}Bukti Tidak Plagiat}{46}
+\contentsline {chapter}{\numberline {4}Chapter 4}{47}
+\contentsline {section}{\numberline {4.1}1174006 - Kadek Diva Krishna Murti}{47}
+\contentsline {subsection}{\numberline {4.1.1}Teori}{48}
+\contentsline {subsection}{\numberline {4.1.2}Praktek}{48}
+\contentsline {subsection}{\numberline {4.1.3}Penanganan Error}{48}
+\contentsline {subsection}{\numberline {4.1.4}Bukti Tidak Plagiat}{48}
+\contentsline {chapter}{\numberline {5}Chapter 5}{49}
+\contentsline {section}{\numberline {5.1}1174006 - Kadek Diva Krishna Murti}{49}
+\contentsline {subsection}{\numberline {5.1.1}Teori}{50}
+\contentsline {subsection}{\numberline {5.1.2}Praktek}{50}
+\contentsline {subsection}{\numberline {5.1.3}Penanganan Error}{50}
+\contentsline {subsection}{\numberline {5.1.4}Bukti Tidak Plagiat}{50}
+\contentsline {chapter}{\numberline {6}Chapter 6}{51}
+\contentsline {section}{\numberline {6.1}1174006 - Kadek Diva Krishna Murti}{51}
+\contentsline {subsection}{\numberline {6.1.1}Teori}{52}
+\contentsline {subsection}{\numberline {6.1.2}Praktek}{52}
+\contentsline {subsection}{\numberline {6.1.3}Penanganan Error}{52}
+\contentsline {subsection}{\numberline {6.1.4}Bukti Tidak Plagiat}{52}
+\contentsline {chapter}{\numberline {7}Chapter 7}{53}
+\contentsline {section}{\numberline {7.1}1174006 - Kadek Diva Krishna Murti}{53}
+\contentsline {subsection}{\numberline {7.1.1}Teori}{54}
+\contentsline {subsection}{\numberline {7.1.2}Praktek}{54}
+\contentsline {subsection}{\numberline {7.1.3}Penanganan Error}{54}
+\contentsline {subsection}{\numberline {7.1.4}Bukti Tidak Plagiat}{54}
